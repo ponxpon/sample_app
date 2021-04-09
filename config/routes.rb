@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get 'top' => 'homes#top'
   post 'todolists' => 'todolists#create'
   get 'todolists' => 'todolists#index'
-
-end
+  # …/todolists/1や…/todolists/3に該当する
+  get 'todolists/:id' => 'todolists#show', as: 'todolist'
+ end
